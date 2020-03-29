@@ -1,0 +1,15 @@
+"The Canterbury Tales" by Chaucer, G.
+"Algorithms" by Sedgewick, R.
+"The C Programming Language" by Kernighan, B. and Ritchie, D.
+"Machine learning: a probabilistic perspective" by Kevin Murphy
+END
+BORROW "Algorithms"
+BORROW "The C Programming Language"
+RETURN "Algorithms"
+BORROW "Machine learning: a probabilistic perspective"
+RETURN "The C Programming Language"
+RETURN "Machine learning: a probabilistic perspective"
+BORROW "The Canterbury Tales"
+RETURN "The Canterbury Tales"
+SHELVE
+END
