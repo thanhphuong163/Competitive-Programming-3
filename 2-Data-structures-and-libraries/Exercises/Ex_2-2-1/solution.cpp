@@ -16,16 +16,40 @@ using namespace std;
 bool solve_1(vector<int> vi) {
     sort(vi.begin(), vi.end()); // sort with complexity O(nlogn)
     int curr = vi[0];
-    for (int i=1; i < vi.size(); i++) {
+    for (int i = 1; i < vi.size(); i++) {
         if (curr != vi[i]) {curr = vi[i];}
         else {return true;}
     }
     return false;
 }
 
-map<int, int> solve_2(vector<int>vi, int v) {
-    map<int, int> result;
-    
+void solve_2(vector<int>vi, int v) {
+    vector< pair<int, int> > result;
+    // This solution has complexity O(n^2).
+    for (int i = 0; i < vi.size(); i++) {
+        // vi[i] is now considered as a
+        int b = v - vi[i];
+        for (int j=i+1; j<vi.size(); j++) {
+            if (b == vi[j]) {
+                result.push_back(make_pair(vi[i],vi[j]));
+            }
+        }
+    }
+    if (!result.empty()) {
+        for (vector< pair<int, int> >::iterator it=result.begin(); it != result.end(); it++) {
+            cout << "(" << it->first << ", " << it->second << ") ";
+        }
+    }
+    else {
+        cout << "There is no pair (a, b) such that a+b=" << v << ".";
+    }
+    cout << endl;
+}
+
+void solve_3(vector<int> vi, int v) {
+    // In case of the sorted array, I have a O(n) solution.
+    int start=0;
+    int end
 }
 
 int main(int argc, char const *argv[]) {
@@ -46,11 +70,11 @@ int main(int argc, char const *argv[]) {
         else {
             cout << "There is no pair of duplicate." << endl;
         }
-
-        for (int i=0; i < vi.size(); i++) {
-            cout << vi[i] << " ";
-        }
-        cout << endl;
+        solve_2(vi, 5);
+        // for (int i=0; i < vi.size(); i++) {
+        //     cout << vi[i] << " ";
+        // }
+        // cout << endl;
         n_testcase--;
     }
     return 0;
