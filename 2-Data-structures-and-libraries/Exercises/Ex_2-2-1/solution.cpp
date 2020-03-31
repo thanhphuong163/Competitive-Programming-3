@@ -47,9 +47,34 @@ void solve_2(vector<int>vi, int v) {
 }
 
 void solve_3(vector<int> vi, int v) {
+    // We need to sort the array as the description
+    sort(vi.begin(), vi.end());
     // In case of the sorted array, I have a O(n) solution.
-    int start=0;
-    int end
+    vector< pair<int, int> > result;
+    int head = 0;
+    int tail = vi.size() - 1;
+    while (head < tail) {
+        if (vi[head] + vi[tail] > v) {
+            tail--;
+        }
+        else if (vi[head] + vi[tail] < v) {
+            head++;
+        }
+        else {
+            result.push_back(make_pair(vi[head], vi[tail]));
+            head++;
+            tail--;
+        }
+    }
+    if (!result.empty()) {
+        for (vector< pair<int, int> >::iterator it = result.begin(); it != result.end(); it++) {
+            cout << "(" << it->first << ", " << it->second << ") ";
+        }
+    }
+    else {
+        cout << "There is no pair (a, b) such that a+b=" << v << ".";
+    }
+    cout << endl;
 }
 
 int main(int argc, char const *argv[]) {
@@ -71,6 +96,7 @@ int main(int argc, char const *argv[]) {
             cout << "There is no pair of duplicate." << endl;
         }
         solve_2(vi, 5);
+        solve_3(vi, 5);
         // for (int i=0; i < vi.size(); i++) {
         //     cout << vi[i] << " ";
         // }
