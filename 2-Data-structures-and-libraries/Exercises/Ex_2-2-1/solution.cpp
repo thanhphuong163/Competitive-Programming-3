@@ -110,6 +110,12 @@ int solve_5(vector<int> vi) {
     return longest_length;
 }
 
+int solve_6(vector<int> vi) {
+    int med_pos = vi.size() / 2;
+    sort(vi.begin(), vi.end());
+    return vi[med_pos];
+}
+
 int main(int argc, char const *argv[]) {
     int n_testcase;
     scanf("%d\n", &n_testcase);
@@ -132,6 +138,7 @@ int main(int argc, char const *argv[]) {
         solve_3(vi, 5);
         solve_4(vi, 2, 7);
         cout << "The length of the longest increasing contiguous sub-array is " << solve_5(vi) << endl;
+        cout << "Median of the array S is " << solve_6(vi) << endl;
         // for (int i=0; i < vi.size(); i++) {
         //     cout << vi[i] << " ";
         // }
