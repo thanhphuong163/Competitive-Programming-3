@@ -6,7 +6,7 @@ Given a 1-based compact array $A$ containing n integers $(1 ≤ n ≤ 10^5)$ tha
 
 ## My Answer
 
-This is a $\mathbb{O}(n)$ solution. The idea is that heap is an array, so we just go through the array and get integers that are greater than $v$.
+This is a $\mathcal{O}(n)$ solution. The idea is that heap is an array, so we just go through the array and get integers that are greater than $v$.
 
 ```c++
 void get_ele_gt(vector<int> &heap, int v) {

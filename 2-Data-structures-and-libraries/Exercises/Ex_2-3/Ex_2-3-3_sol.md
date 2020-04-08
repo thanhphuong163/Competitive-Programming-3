@@ -2,7 +2,7 @@
 
 ## Description
 
-Suppose you are given a reference to the root $R$ of a binary tree $T$ containing $n$ vertices. You can access a node’s left, right and parent vertices as well as its key through its reference. Solve each of the following tasks below with the best possible algorithms that you can think of and analyze their time complexities. Let’s assume the following constraints: $1 ≤ n ≤ 100K$ so that $\mathbb{O}(n^2)$ solutions are theoretically infeasible in a contest environment.
+Suppose you are given a reference to the root $R$ of a binary tree $T$ containing $n$ vertices. You can access a node’s left, right and parent vertices as well as its key through its reference. Solve each of the following tasks below with the best possible algorithms that you can think of and analyze their time complexities. Let’s assume the following constraints: $1 ≤ n ≤ 100K$ so that $\mathcal{O}(n^2)$ solutions are theoretically infeasible in a contest environment.
 
 1. Check if $T$ is a BST.
 2. Output the elements in $T$ that are within a given range $[a..b]$ in ascending order.
