@@ -12,6 +12,8 @@ insert(6), insert(71), insert(50), insert(4), insert(7), and insert(5).
 5. Display the steps taken by successor(23), successor(7), and successor(71).
 6. Display the steps taken by delete(5) (a leaf), delete(71) (an internal node with one child), and then delete(15) (an internal node with two children).
 
+![BST](fig_2-2.png)
+
 ## My Answer
 
 Too easy, so I've done it on my notebook.
