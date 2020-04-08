@@ -11,4 +11,5 @@ We will not discuss the basics of Heap operations in this book. Instead, we will
 
 ## My Answer
 
-90 26 36 17 19 25 1 2 7 3
+1. Final heap: 90 26 36 17 19 25 1 2 7 3
+2. Final heap: 36 26 25 17 19 3 1 2 7
